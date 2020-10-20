@@ -68,7 +68,7 @@
     }
 
     function makeHighlight(range) {
-        var h = pane.addMark(new marks.Highlight(range));
+        var h = pane.addMark(new marks.Underline(range, null, null, {"stroke-width": "1", "stroke": "black", "stroke-linecap": "square"}));
         h.element.addEventListener("click", function () {
             console.log("highlight clicked");
             if (!selecting) { pane.removeMark(h); }
